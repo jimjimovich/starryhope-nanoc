@@ -1,4 +1,4 @@
-### Starry Hope Nanoc
+# Starry Hope Nanoc
 
 ## What is this?
 This is the source code used to build [www.starryhope.com](http://www.starryhope.com). Starry Hope is built using open source technologies. So many people in the open source community helped me over the years and with this project (through their websites, github repos and IRC chat), so I thought I would be a good open source citizen and release this code for anyone to view, copy, use or fork.
@@ -35,7 +35,7 @@ Edit config.yaml to fit your needs
 - [CzBox2](http://janpecha.iunas.cz/czbox/example/)
 
 ## License
-# The MIT License (MIT)
+### The MIT License (MIT)
 Copyright (c) 2013 Jim Mendenhall (<a href="http://plus.google.com/112729990417360524968?rel=author">Google +</a> profile)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
