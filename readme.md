@@ -9,6 +9,23 @@ Feel free to browse this code for ideas for making your own nanoc powered blog, 
 If you have Virtualbox and [Vagrant](http://www.vagrantup.com/) installed, you can get started really quickly. If you don't use Vagrant, I highly suggest you give it a try.
 
 1. Clone this repository
+  git clone git@github.com:jimjimovich/starryhope-nanoc.git
+  cd starryhope-nanoc
+
+2. Set up VM with Vagrant
+  vagrant up
+  
+3. Configure site
+Edit config.yaml to fit your needs
+
+4. Compile site 
+  vagrant ssh
+  cd /vagrant
+  sudo service nginx restart (needed first time only)
+  nanoc co
+
+5. Browse to [http://localhost:8080](http://localhost:8080) to see the results!
+
 
 ## Software Used
 - [nanoc](http://nanoc.ws/)
