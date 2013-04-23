@@ -1,7 +1,7 @@
 # Starry Hope Nanoc
 
 ## What is this?
-This is the source code used to build [www.starryhope.com](http://www.starryhope.com). Starry Hope is built using open source technologies. So many people in the open source community helped me over the years and with this project (through their websites, github repos and IRC chat), so I thought I would be a good open source citizen and release this code for anyone to view, copy, use or fork.
+This is the source code used to build [www.starryhope.com](http://www.starryhope.com). Starry Hope is built using open source technologies. So many people in the open source community have helped me over the years and with this project (through their websites, github repos and IRC chat), so I thought I would be a good open source citizen and release this code for anyone to view, copy, use or fork.
 
 Feel free to browse this code for ideas for making your own nanoc powered blog, or download it and use it as a template for your own site. If you find this useful, it'd be great if you would link to [www.starryhope.com](http://www.starryhope.com).
 
@@ -9,20 +9,19 @@ Feel free to browse this code for ideas for making your own nanoc powered blog, 
 If you have Virtualbox and [Vagrant](http://www.vagrantup.com/) installed, you can get started really quickly. If you don't use Vagrant, I highly suggest you give it a try.
 
 1. Clone this repository
-  git clone git@github.com:jimjimovich/starryhope-nanoc.git
-  cd starryhope-nanoc
+    git clone git@github.com:jimjimovich/starryhope-nanoc.git
+    cd starryhope-nanoc
 
 2. Set up VM with Vagrant
-  vagrant up
+    vagrant up
   
-3. Configure site
-Edit config.yaml to fit your needs
+3. Edit config.yaml to fit your needs
 
 4. Compile site 
-  vagrant ssh
-  cd /vagrant
-  sudo service nginx restart (needed first time only)
-  nanoc co
+    vagrant ssh
+    cd /vagrant
+    sudo service nginx restart (needed first time only)
+    nanoc co
 
 5. Browse to [http://localhost:8080](http://localhost:8080) to see the results!
 
