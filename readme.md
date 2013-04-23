@@ -20,7 +20,7 @@ If you have Virtualbox and [Vagrant](http://www.vagrantup.com/) installed, you c
 #### 4. Compile site 
     vagrant ssh
     cd /vagrant
-    sudo service nginx restart (needed first time only)
+    sudo service nginx restart # needed first time only
     nanoc co
 
 #### 5. Browse to [http://localhost:8080](http://localhost:8080) to see the results!
