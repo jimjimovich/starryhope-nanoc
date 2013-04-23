@@ -15,8 +15,7 @@ If you have Virtualbox and [Vagrant](http://www.vagrantup.com/) installed, you c
 #### Set up VM with Vagrant
     vagrant up
   
-#### Configure site
-    Edit config.yaml to fit your needs
+#### Edit config.yaml to fit your needs
 
 #### Compile site 
     vagrant ssh
