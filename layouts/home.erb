@@ -1,0 +1,35 @@
+<% render 'default' do %>
+
+  <div class="row">
+    <div class="large-6 columns" role="content">
+      <h1>Featured Posts</h1><hr>
+    <% @config[:featured_articles].each do |a| %>
+      <% article = search(a) %>
+      <div class="featured-post">
+        <h3><a href="<%= article.path %>"><%= article[:title] %></a></h3>
+        <% if article[:excerpt] %>
+          <p><% if article[:thumbnail] %><span class="featured-image" style="background-image: url('<%= article[:thumbnail] %>');"></span><% end %><%= article[:excerpt] %>
+          <%= link_to("Continue reading ...", article) %></p>
+        <% end %>
+      </div>
+    <% end %>
+    </div>
+
+    <div class="large-6 columns" role="content">
+      <h1>Most Popular Posts</h1><hr>
+      <% @config[:popular_articles].each do |a| %>
+        <% article = search(a) %>
+        <div class="featured-post">
+          <h3><a href="<%= article.path %>"><%= if article[:title_short] then article[:title_short] else article[:title] end %></a></h3>
+          <% if article[:excerpt] %>
+            <p><% if article[:thumbnail] %><span class="featured-image" style="background-image: url('<%= article[:thumbnail] %>');"></span><% end %><%= article[:excerpt] %>
+              <%= link_to("Continue reading ...", article) %></p>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <%= yield %>
+
+<% end %>

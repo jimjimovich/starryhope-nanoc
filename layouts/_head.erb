@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="chrome=IE8">
+
+  <title><%= @item[:title] %></title>
+  <meta name="description" content="<%= @item[:description] %>">
+
+  <meta property="og:title" content="<%= @item[:title] %>">
+  <% if @item[:kind] == 'article' %><meta property="og:type" content="article"><% end %>
+  <meta property="og:url" content="<%= canonical_url %>">
+  <% if @item[:thumbnail] %><meta property="og:image" content="<%= @item[:thumbnail] %>"><% end %>
+  <meta property="og:site_name" content="<%= @config[:site_name] %>">
+  <meta property="og:description" content="<%= @item[:description] %>">
+
+  <% if @item[:kind] == 'article' %><meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="<%= @config[:twitter_user] %>">
+  <meta name="twitter:title" content="<%= @item[:title] %>">
+  <meta name="twitter:description" content="<%= @item[:description] %>">
+  <meta name="twitter:url" content="<%= canonical_url %>">
+  <% if @item[:thumbnail] %><meta name="twitter:image" content="<%= @item[:thumbnail] %>"><% end %><% end %>
+	
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|Droid+Serif:400,700|Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/css/app.css">
+  <link href="<%= canonical_url %>" rel="canonical">
+  <link href="/atom.xml" rel="alternate" type="application/rss+xml" title="Starry Hope">
+
+  <script src="/assets/javascripts/top.js"></script>
+
+  <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">
+</head>

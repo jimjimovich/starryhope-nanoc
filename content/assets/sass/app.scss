@@ -1,0 +1,167 @@
+@import "normalize";
+
+// Global Foundation Settings
+@import "settings";
+
+// Import specific parts of Foundation
+@import "foundation/foundation-global"; // *always required
+@import "foundation/components/global"; // *always required
+@import "foundation/components/grid";
+@import "foundation/components/visibility";
+@import "foundation/components/block-grid";
+@import "foundation/components/type";
+@import "foundation/components/buttons";
+@import "foundation/components/forms"; // *requires components/buttons
+// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
+// @import "foundation/components/button-groups"; // *requires components/buttons
+// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
+// @import "foundation/components/split-buttons"; // *requires components/buttons
+// @import "foundation/components/flex-video";
+// @import "foundation/components/section";
+@import "foundation/components/top-bar";  // *requires components/grid
+// @import "foundation/components/orbit";
+// @import "foundation/components/reveal";
+// @import "foundation/components/joyride";
+// @import "foundation/components/clearing";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/keystrokes";
+// @import "foundation/components/labels";
+// @import "foundation/components/inline-lists";
+// @import "foundation/components/pagination";
+@import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switch";
+// @import "foundation/components/magellan";
+// @import "foundation/components/tables";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+// @import "foundation/components/dropdown";
+
+@import "czbox.scss";
+
+#logo {
+	width: 100%;
+	padding: 15px 0;
+}
+
+.meta {
+	font-size: emCalc(12px);
+	padding-top: 0;
+	margin-top: 0;
+}
+
+.meta .categories {
+}
+
+.vcard {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.vcard .fn {
+	padding: 0;
+	margin: 0 0 0 emCalc(2px);
+	border: 0;
+	font-weight: normal;
+	font-size: inherit;
+}
+
+article {
+	h1.title { margin: 0; }	
+	img { margin: 10px; box-sizing: content-box;}
+	ul {
+		margin-left: 2em;
+	}
+	.sharing {
+		text-align: center;
+		background: #F9FAD7;
+		margin-bottom: 20px;
+		h2, h3 { font-family: 'Nothing You Could Do', cursive; }
+		h2 { margin: 0.5em 0 0.5em 0; }
+		h3 { margin: 0.5em 0 0.5em 0; color: #0f5c85;}
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+		#fb-root, .twitter-share, .g-plusone {
+			display: inline;
+		}
+		.fb_edge_widget_with_comment {
+			top: -4px;
+		}
+	}
+}
+
+aside {
+	margin-top: 0.5em;
+}
+
+iframe {
+	max-width: 100%;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #323232 }
+
+p code, li code {
+	display: inline-block;
+	white-space: no-wrap;
+	background: #fff;
+	font-size: 80%;
+	line-height: inherit;
+	color: #555;
+	border: 1px solid #ddd;
+	-moz-border-radius: 0.4em;
+	-webkit-border-radius: 0.4em;
+	-o-border-radius: 0.4em;
+	-ms-border-radius: 0.4em;
+	-khtml-border-radius: 0.4em;
+	border-radius: 0.4em;
+	padding: 0 .3em;
+}
+
+.featured-image {
+	width: 150px;
+  height: 150px;
+  background-position: center center;
+  float: left;
+  margin: 0 15px 0 0;
+  border: 1px solid #323232;
+  box-sizing: content-box;
+}
+
+.featured-post {
+	clear:both; 
+	margin-bottom: 20px;
+	min-height: 220px;
+		p { font-size: 90%; }
+}
+
+.profile-image {
+	@include radius(6px);
+	float: left;
+	margin: 0.75em 1.25em 0 0;
+}
+
+.archive {
+	h3 { 
+		font-weight: normal;
+		margin-bottom: 0;
+		line-height: 1em;
+	}
+	.meta {
+		color: #aaa;
+
+		a {
+			color: #aaa;
+			text-decoration: underline;
+		}
+	}
+}
+
+.panel.featured ul {
+	list-style-type: none;
+	li { margin-bottom: 0.5em; }
+}

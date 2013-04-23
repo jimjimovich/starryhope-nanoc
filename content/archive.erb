@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="large-9 columns archive" role="content">
+    <h1>Archive</h1>
+  <% sorted_articles.each do |article| %>
+    <% next if article[:draft] %>
+      <div class="post">
+        <h3><a href="<%= article.path %>"><%= article[:title] %></a></h3>
+        <p class="meta">Posted on <%= attribute_to_time(article[:created_at]).strftime('%B %-d, %Y') %>. Tags: <%= tags_for_post article %></p>
+      </div>
+  <% end %>
+  </div>
+  <%= render '_sidebar' %>
+</div>

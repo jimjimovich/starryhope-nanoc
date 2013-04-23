@@ -1,0 +1,21 @@
+    <aside class="large-3 columns">
+
+      <div class="panel featured">
+        <h4>Most Popular Posts</h4>
+        <% @config[:popular_articles].each do |a| %>
+        <ul>
+          <li><a href="<%= search(a).path %>"><%= search(a)[:title] %></a></li>
+        <% end %>
+        </ul>
+
+        <h4>Featured Posts</h4>
+        <% @config[:featured_articles].each do |a| %>
+        <ul>
+          <li><a href="<%= search(a).path %>"><%= search(a)[:title] %></a></li>
+        <% end %>
+        </ul>
+      </div>
+
+      <%= render '_sidebar_ad' %>
+
+    </aside>

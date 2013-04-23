@@ -1,0 +1,1 @@
+<% excluded_extensions = ['js', 'css', 'xml', 'txt', 'scss', 'json', 'xml'] %><%= xml_sitemap :items => @items.reject{ |i| i.binary? || i[:is_hidden] || excluded_extensions.include?(i[:extension]) || i.path.include?('/tags/') } %>
