@@ -13,8 +13,8 @@ unless defined? LOADED_DEFAULT_CONFIG
   include Nanoc::Helpers::Tagging
 
   # cache busting
-  #require 'nanoc/cachebuster'
-  #include Nanoc::Helpers::CacheBusting
+  require 'nanoc/cachebuster'
+  include Nanoc::Helpers::CacheBusting
   
   # image compression
   require 'nanoc/filters/image_compressor'
