@@ -8,4 +8,8 @@ module Custom
   def search(a)
     @items.find { |i| i.identifier == "/articles/#{a}/" }
   end
+
+  def youtube(code)
+    output = "<div class='youtube'><iframe src='http://www.youtube.com/embed/#{code}?rel=0' frameborder='0' allowfullscreen></iframe></div>"
+  end
 end

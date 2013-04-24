@@ -63,15 +63,28 @@ compile '/assets/javascripts/*' do
 end
 
 compile '/articles/*' do
-  filter :kramdown, :auto_ids => false
+    case item[:extension]
+    when 'md'
+      filter :erb
+      filter :kramdown, :auto_ids => false
+    when 'markdown'
+      filter :erb
+      filter :kramdown, :auto_ids => false
+    when 'html'
+      filter :erb
+    when 'erb'
+      filter :erb
+    else
+      filter :kramdown, :auto_ids => false
+    end
   layout 'article'
   filter :cache_buster
 end
 
 compile '/tags/*/' do
   filter :erb
-  filter :cache_buster
   layout 'tags'
+  filter :cache_buster
 end
 
 compile '/atom/' do
