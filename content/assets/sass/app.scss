@@ -42,6 +42,7 @@
 // @import "foundation/components/dropdown";
 
 @import "czbox.scss";
+@import "fc-webicons.scss";
 
 #logo {
 	width: 100%;
@@ -90,14 +91,33 @@ article {
 			display: inline;
 		}
 		.fb_edge_widget_with_comment {
-			top: -4px;
+			top: 0;
 		}
+	}
+	.youtube {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+    margin-bottom: 20px;
+	}
+	.youtube iframe,
+	.youtube object,
+	.youtube embed {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
 	}
 }
 
 aside {
 	margin-top: 0.5em;
-}
+	.social {
+		h4 { font-family: 'Nothing You Could Do', cursive; text-align: center; }
+	}}
 
 iframe {
 	max-width: 100%;
@@ -166,25 +186,6 @@ pre {
 .panel.featured ul {
 	list-style-type: none;
 	li { margin-bottom: 0.5em; }
-}
-
-.youtube {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px; 
-    height: 0; 
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-.youtube iframe,
-.youtube object,
-.youtube embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
 
 .alert {

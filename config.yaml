@@ -38,6 +38,13 @@ gplus_enabled: true
 fb_like_enabled: true
 fb_appID: 'YOUR APP ID'
 
+# Social Links
+social_facebook: ''
+social_twitter: ''
+social_googleplus: ''
+social_github: ''
+social_youtube: ''
+social_rss: ''
 
 # A list of file extensions that nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file

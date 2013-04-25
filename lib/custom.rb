@@ -5,6 +5,14 @@ module Custom
     @config[:base_url] + @item.path
   end
 
+  def meta_thumbnail
+    unless @item[:thumbnail].include? 'http'
+      @config[:base_url] + @item[:thumbnail]
+    else
+      @item[:thumbnail]
+    end
+  end
+
   def search(a)
     @items.find { |i| i.identifier == "/articles/#{a}/" }
   end

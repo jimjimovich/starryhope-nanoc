@@ -13,7 +13,7 @@
   <meta property="og:title" content="<%= @item[:title] %>">
   <% if @item[:kind] == 'article' %><meta property="og:type" content="article"><% end %>
   <meta property="og:url" content="<%= canonical_url %>">
-  <% if @item[:thumbnail] %><meta property="og:image" content="<%= @item[:thumbnail] %>"><% end %>
+  <% if @item[:thumbnail] %><meta property="og:image" content="<%= meta_thumbnail %>"><% end %>
   <meta property="og:site_name" content="<%= @config[:site_name] %>">
   <meta property="og:description" content="<%= @item[:description] %>">
 
@@ -22,7 +22,7 @@
   <meta name="twitter:title" content="<%= @item[:title] %>">
   <meta name="twitter:description" content="<%= @item[:description] %>">
   <meta name="twitter:url" content="<%= canonical_url %>">
-  <% if @item[:thumbnail] %><meta name="twitter:image" content="<%= @item[:thumbnail] %>"><% end %><% end %>
+  <% if @item[:thumbnail] %><meta name="twitter:image" content="<%= meta_thumbnail %>"><% end %><% end %>
 	
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|Droid+Serif:400,700|Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/assets/css/app.css">

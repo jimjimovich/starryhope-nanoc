@@ -16,6 +16,16 @@
         </ul>
       </div>
 
+      <div class="panel social">
+        <h4>Follow <%= @config[:site_name] %></h4>
+        <a href="<%= @config[:social_facebook] %>" class="fc-webicon facebook">Like on Facebook</a>
+        <a href="<%= @config[:social_twitter] %>" class="fc-webicon twitter">Follow on Twitter</a>
+        <a href="<%= @config[:social_googleplus] %>" class="fc-webicon googleplus">Follow on Google+</a>
+        <a href="<%= @config[:social_youtube] %>" class="fc-webicon youtube">Subscribe on Youtube</a>
+        <a href="<%= @config[:social_github] %>" class="fc-webicon github">Fork on GitHub</a>
+        <a href="<%= @config[:social_rss] %>" class="fc-webicon rss">Subscribe to RSS</a>
+      </div>
+
       <%= render '_sidebar_ad' %>
 
     </aside>

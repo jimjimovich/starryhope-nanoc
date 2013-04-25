@@ -33,6 +33,7 @@ If you have Virtualbox and [Vagrant](http://www.vagrantup.com/) installed, you c
 - [Vagrant](http://www.vagrantup.com/)
 - [CzBox2](http://janpecha.iunas.cz/czbox/example/)
 - [nanoc-cachebuster](http://avdgaag.github.io/nanoc-cachebuster/)
+- [FC Webicons](https://github.com/adamfairhead/webicons) by [Fairhead Creative](http://fairheadcreative.com/)
 
 ## License
 ### The MIT License (MIT)
