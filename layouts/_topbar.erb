@@ -1,42 +1,41 @@
-  <div class="row">
-    <div class="large-12 columns">
-      <nav class="top-bar">
-        <ul class="title-area">
-          <li class="name"> </li>
-          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-        </ul>
-        <section class="top-bar-section">
-          <ul class="left">
-            <li class="has-dropdown"><a href="/tags/ubuntu/">Ubuntu</a>
+<div class="contain-to-grid">
+  <nav class="top-bar">
+    <ul class="title-area">
+      <a href="/"><li class="name"> </li></a>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+      <ul class="left">
+        <li class="divider"></li>
+        <li class="has-dropdown"><a href="/tags/ubuntu/">Ubuntu</a>
 
-              <ul class="dropdown">
-                <li><a href="/tags/ubuntu/">Ubuntu Articles</a></li>
-                <li><a href="/tags/ubuntu-for-beginners/">Ubuntu for Beginners</a></li>
-              </ul>
-            </li>
-            <li><a href="/tags/mac-os-x/">Mac OS X</a></li>
-            <!-- <li><a href="/tags/system-administration/">System Administration</a></li> -->
+          <ul class="dropdown">
+            <li><a href="/tags/ubuntu/">Ubuntu Articles</a></li>
+            <li><a href="/tags/ubuntu-for-beginners/">Ubuntu for Beginners</a></li>
           </ul>
-          <% if @config[:cse_enabled] %>
-          <ul class="right">
-            <li class="has-form">
-              <form action="/search/" id="cse-search-box">
-                <div class="row collapse">
-                  <div class="small-9 columns">
-                    <input type="hidden" name="cx" value="<%= @config[:cse_id] %>" />
-                    <input type="hidden" name="cof" value="FORID:10" />
-                    <input type="hidden" name="ie" value="UTF-8" />
-                    <input type="text" name="q" style="width: 100%;" class="text-input" />
-                  </div>
-                  <div class="small-3 columns">
-                    <input type="submit" name="sa" value="Search" class="alert button" />
-                  </div>
-                </div>
-              </form>
-            </li>
-          </ul>
-          <% end %>
-        </section>
-      </nav>
-    </div>
-  </div>
+        </li>
+        <li><a href="/tags/mac-os-x/">Mac OS X</a></li>
+        <!-- <li><a href="/tags/system-administration/">System Administration</a></li> -->
+      </ul>
+      <% if @config[:cse_enabled] %>
+      <ul class="right">
+        <li class="has-form">
+          <form action="/search/" id="cse-search-box">
+            <div class="row collapse">
+              <div class="small-9 columns">
+                <input type="hidden" name="cx" value="<%= @config[:cse_id] %>" />
+                <input type="hidden" name="cof" value="FORID:10" />
+                <input type="hidden" name="ie" value="UTF-8" />
+                <input type="text" name="q" style="width: 100%;" class="text-input" />
+              </div>
+              <div class="small-3 columns">
+                <input type="submit" name="sa" value="Search" class="alert button" />
+              </div>
+            </div>
+          </form>
+        </li>
+      </ul>
+      <% end %>
+    </section>
+  </nav>
+</div>

@@ -1,5 +1,5 @@
 <% render 'default' do %>
-<div class="row">
+<div class="row content-wrapper">
   <div class="large-9 columns archive" role="content">
     <h1>Posts Tagged: <%= @item[:tag] %></h1>
   <% items_with_tag_by_date(@item[:tag]).each do |article| %>

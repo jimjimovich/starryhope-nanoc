@@ -44,6 +44,18 @@
 @import "czbox.scss";
 @import "fc-webicons.scss";
 
+@media #{$small} { 
+	body { 
+		background: #e1e1e1 url('/assets/images/fabric_of_squares_gray.png'); 
+	}
+	.content-wrapper { 
+		background: #fff;
+		@include radius(0.4em);
+		padding-top: 6px;
+		border: 1px #d9d9d9 solid;
+	}
+}
+
 #logo {
 	width: 100%;
 	padding: 15px 0;
@@ -117,8 +129,20 @@ aside {
 	margin-top: 0.5em;
 	.social {
 		h4 { font-family: 'Nothing You Could Do', cursive; text-align: center; }
-	}}
+	}
+	.panel {@include radius(0.2em);}
+}
 
+ footer { 
+	background: #f1f1f1;
+	margin-top: 20px;
+	padding: 10px 0;
+	border-top: 1px #d9d9d9 solid;
+	width: 100%;
+	p {margin-bottom: 0;}
+}
+
+ 
 iframe {
 	max-width: 100%;
 }
@@ -193,4 +217,27 @@ pre {
 	color: #8A1F11;
 	border: 2px solid #FBC2C4;
 	padding: 10px;
+}
+
+/* Using the available options */
+.apt {
+  @include button($button-med, #dd4814, false, false, false, false);
+}
+
+.contain-to-grid {
+	margin-bottom: 2em;
+}
+
+.top-bar .title-area .name {
+	background:#323232 url('/assets/images/logo_white.png') no-repeat;
+	width: 0;
+}
+
+/* Hide things/show when the screen is narrower than 768px */
+@media #{$small} { 
+	.big-header { display:none; }
+	.top-bar .title-area .name {
+		width: 255px;
+		display: list-item;
+	}
 }
