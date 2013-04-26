@@ -1,8 +1,7 @@
 <% render 'default' do %>
   <div class="row content-wrapper">
-    <div class="large-12 columns" role="content">
+    <article class="large-12 columns" role="content">
       <div class="large-6 columns" role="content">
-        <h1>Featured Posts</h1><hr>
       <% @config[:featured_articles].each do |a| %>
         <% article = search(a) %>
         <div class="featured-post">
@@ -16,7 +15,6 @@
       </div>
 
       <div class="large-6 columns" role="content">
-        <h1>Most Popular Posts</h1><hr>
         <% @config[:popular_articles].each do |a| %>
           <% article = search(a) %>
           <div class="featured-post">
@@ -31,6 +29,6 @@
       <div class="large-12 columns" role="content">
         <%= yield %>
       </div>
-    </div>
+    </article>
   </div>
 <% end %>

@@ -1,8 +1,10 @@
 <% render 'default' do %>
 <div class="row content-wrapper">
-  <article class="large-9 columns page" role="content">
-    <%= yield %>
-  </article>
-  <%= render '_sidebar' %>
+  <div class="large-12 columns">
+    <article class="large-9 columns page" role="content">
+      <%= yield %>
+    </article>
+    <%= render '_sidebar' %>
+  </div>
 </div>
 <% end %>

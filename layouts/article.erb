@@ -1,49 +1,51 @@
 <% render 'default' do %>
   <div class="row content-wrapper">
-    <article class="large-9 columns" role="content">
-    	<h1 class="title"><%= item[:title] %></h1>
-    	<p class="meta">
-    		Posted on <time datetime="<%= item[:created_at] %>" pubdate  data-updated="true" ><%= attribute_to_time(item[:created_at]).strftime('%B %-d, %Y') %></time>
-     		<span class="byline author vcard">by <span class="fn"><%= item[:author] || @config[:author_name] %></span></span><br>
-    		<span class="categories">
-    			Tags: <%= tags_for_post @item %>
-    		</span>
-      	</p>
+    <div class="large-12 columns">
+      <article class="large-9 columns" role="content">
+      	<h1 class="title"><%= item[:title] %></h1>
+      	<p class="meta">
+      		Posted on <time datetime="<%= item[:created_at] %>" pubdate  data-updated="true" ><%= attribute_to_time(item[:created_at]).strftime('%B %-d, %Y') %></time>
+       		<span class="byline author vcard">by <span class="fn"><%= item[:author] || @config[:author_name] %></span></span><br>
+      		<span class="categories">
+      			Tags: <%= tags_for_post @item %>
+      		</span>
+        	</p>
 
-    	<%= yield %>
+      	<%= yield %>
 
-        <% if item[:sharing] || item[:comments] %>
-          <div class="sharing">
-            <h2>Did you enjoy this article?</h2>
-            
-            <% if @config[:twitter_enabled] %> 
-              <div class="twitter-share">
-              <a href="http://twitter.com/share" class="twitter-share-button" data-url="<%= canonical_url %>" data-via="" data-counturl="<%= canonical_url %>">Tweet</a>
-              </div>
-            <% end %>
+          <% if item[:sharing] || item[:comments] %>
+            <div class="sharing">
+              <h2>Did you enjoy this article?</h2>
+              
+              <% if @config[:twitter_enabled] %> 
+                <div class="twitter-share">
+                <a href="http://twitter.com/share" class="twitter-share-button" data-url="<%= canonical_url %>" data-via="" data-counturl="<%= canonical_url %>">Tweet</a>
+                </div>
+              <% end %>
 
-            <% if @config[:gplus_enabled] %>
-              <div class="g-plusone" data-size="medium"></div>
-            <% end %>
+              <% if @config[:gplus_enabled] %>
+                <div class="g-plusone" data-size="medium"></div>
+              <% end %>
 
-            <% if @config[:fb_like_enabled] %>
-              <div id="fb-root"></div>
-              <script>(function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=<%= @config[:fb_appID] %>";
-                fjs.parentNode.insertBefore(js, fjs);
-              }(document, 'script', 'facebook-jssdk'));</script>
-              <div class="fb-like" data-href="<%= canonical_url %>" data-send="true" data-layout="button_count" data-width="150" data-show-faces="false"></div>
-            <% end %>
+              <% if @config[:fb_like_enabled] %>
+                <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=<%= @config[:fb_appID] %>";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+                <div class="fb-like" data-href="<%= canonical_url %>" data-send="true" data-layout="button_count" data-width="150" data-show-faces="false"></div>
+              <% end %>
 
-            <h3>Share the love!</h3>
-          </div>
-        <% end %>
+              <h3>Share the love!</h3>
+            </div>
+          <% end %>
 
-      <% unless item[:comments] == false || @config[:disqus_enabled] == false %><%= render '_disqus' %><% end %>
-     </article>
-     <%= render '_sidebar' %>
+        <% unless item[:comments] == false || @config[:disqus_enabled] == false %><%= render '_disqus' %><% end %>
+      </article>
+      <%= render '_sidebar' %>
+    </div>
   </div>
 <% end %>

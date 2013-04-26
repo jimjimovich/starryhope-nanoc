@@ -1,15 +1,17 @@
 <% render 'default' do %>
 <div class="row content-wrapper">
-  <div class="large-9 columns archive" role="content">
-    <h1>Posts Tagged: <%= @item[:tag] %></h1>
-  <% items_with_tag_by_date(@item[:tag]).each do |article| %>
-    <% next if article[:draft] %>
-      <div class="post">
-        <h3><a href="<%= article.path %>"><%= article[:title] %></a></h3>
-        <p class="meta">Posted on <%= attribute_to_time(article[:created_at]).strftime('%B %-d, %Y') %>. Tags: <%= tags_for_post article %></p>
-      </div>
-  <% end %>
+  <div class="large-12 columns">
+    <article class="large-9 columns archive" role="content">
+      <h1>Posts Tagged: <%= @item[:tag] %></h1>
+    <% items_with_tag_by_date(@item[:tag]).each do |article| %>
+      <% next if article[:draft] %>
+        <div class="post">
+          <h3><a href="<%= article.path %>"><%= article[:title] %></a></h3>
+          <p class="meta">Posted on <%= attribute_to_time(article[:created_at]).strftime('%B %-d, %Y') %>. Tags: <%= tags_for_post article %></p>
+        </div>
+    <% end %>
+    </article>
+    <%= render '_sidebar' %>
   </div>
-  <%= render '_sidebar' %>
 </div>
 <% end %>

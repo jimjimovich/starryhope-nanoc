@@ -51,7 +51,6 @@
 	.content-wrapper { 
 		background: #fff;
 		@include radius(0.4em);
-		padding-top: 6px;
 		border: 1px #d9d9d9 solid;
 	}
 }
@@ -85,6 +84,7 @@
 }
 
 article {
+	padding-top: 20px;
 	h1.title { margin: 0; }	
 	img { margin: 10px; box-sizing: content-box;}
 	ul, ol {
@@ -126,7 +126,7 @@ article {
 }
 
 aside {
-	margin-top: 0.5em;
+	padding-top: 30px;
 	.social {
 		h4 { font-family: 'Nothing You Could Do', cursive; text-align: center; }
 	}
@@ -219,7 +219,6 @@ pre {
 	padding: 10px;
 }
 
-/* Using the available options */
 .apt {
   @include button($button-med, #dd4814, false, false, false, false);
 }
