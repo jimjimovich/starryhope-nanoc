@@ -86,7 +86,10 @@
 article {
 	padding-top: 20px;
 	h1.title { margin: 0; }	
-	img { margin: 10px; box-sizing: content-box;}
+	img { 
+		margin: 10px; box-sizing: content-box;
+	}
+	.centered {margin-left: auto; margin-right: auto; display: block;}
 	ul, ol {
 		margin-left: 2em;
 	}
@@ -129,6 +132,7 @@ aside {
 	padding-top: 30px;
 	.social {
 		h4 { font-family: 'Nothing You Could Do', cursive; text-align: center; }
+		text-align: center;
 	}
 	.panel {@include radius(0.2em);}
 }
@@ -182,6 +186,21 @@ pre {
 	clear:both; 
 	margin-bottom: 20px;
 	min-height: 220px;
+		p { font-size: 90%; }
+}
+
+.featured-image-small {
+	width: 75px;
+  height: 75px;
+  float: left;
+  margin: 0 15px 0 0;
+  border: 1px solid #323232;
+}
+
+.featured-post-small {
+	clear:both; 
+	margin-bottom: 20px;
+	min-height: 120px;
 		p { font-size: 90%; }
 }
 

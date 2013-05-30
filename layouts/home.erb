@@ -7,7 +7,7 @@
         <div class="featured-post">
           <h3><a href="<%= article.path %>"><%= if article[:title_short] then article[:title_short] else article[:title] end %></a></h3>
           <% if article[:excerpt] %>
-            <p><% if article[:thumbnail] %><span class="featured-image" style="background-image: url('<%= article[:thumbnail] %>');"></span><% end %><%= article[:excerpt] %>
+            <p><% if article[:thumbnail] %><a href="<%= article.path %>"><span class="featured-image" style="background-image: url('<%= article[:thumbnail] %>');"></span></a><% end %><%= article[:excerpt] %>
             <%= link_to("Continue reading ...", article) %></p>
           <% end %>
         </div>
@@ -20,14 +20,30 @@
           <div class="featured-post">
             <h3><a href="<%= article.path %>"><%= if article[:title_short] then article[:title_short] else article[:title] end %></a></h3>
             <% if article[:excerpt] %>
-              <p><% if article[:thumbnail] %><span class="featured-image" style="background-image: url('<%= article[:thumbnail] %>');"></span><% end %><%= article[:excerpt] %>
+              <p><% if article[:thumbnail] %><a href="<%= article.path %>"><span class="featured-image" style="background-image: url('<%= article[:thumbnail] %>');"></span></a><% end %><%= article[:excerpt] %>
                 <%= link_to("Continue reading ...", article) %></p>
             <% end %>
           </div>
         <% end %>
       </div>
+
       <div class="large-12 columns" role="content">
         <%= yield %>
+      </div>
+
+      <div class="large-12 columns" role="content">
+        <h2>Recent Posts</h2>
+        <% @config[:featured_front_bottom].each do |a| %>
+          <% article = search(a) %>
+          <div class="featured-post-small">
+            <h3><a href="<%= article.path %>"><%= if article[:title_short] then article[:title_short] else article[:title] end %></a></h3>
+            <% if article[:excerpt] %>
+              <p><% if article[:thumbnail] %><a href="<%= article.path %>"><img class="featured-image-small" src="<%= article[:thumbnail] %>"></a><% end %><%= article[:excerpt] %>
+                <%= link_to("Continue reading ...", article) %></p>
+            <% end %>
+          </div>
+        <% end %>
+        <a href="/archive/" class="button">Post Archive</a>
       </div>
     </article>
   </div>

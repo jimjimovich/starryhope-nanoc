@@ -117,6 +117,12 @@ end
 
 # Routes
 
+BYPASS_FILES.each do |file|
+  route("/#{file.sub /\..+/, ''}/") do
+    "/#{file}" # route bypass files as is
+  end
+end
+
 route '/assets/sass/app/' do
   "/assets/css/app#{fingerprint(item[:filename])}.css"
 end
