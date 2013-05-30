@@ -27,20 +27,42 @@ If you have Virtualbox and [Vagrant](http://www.vagrantup.com/) installed, you c
 
 ## Get started on [Cloud9](https://c9.io)
 
+#### Fork this repo
+
+#### Clone your forked repo into Cloud9
+
+Chose the repo you just forked from your list of repos in your Cloud9 dashboard and click "clone to edit"
+
+#### Install gems
+
+(the following comands are all for the terminal in Cloud9)
+    bundle install
+    
+#### Install nginx
+
+    c9pm install nginx
+
 #### Configure and start nginx
 
 Generate your nginx.conf file (to add your ip, port and root folder)
-
     c9-nginx/generate-conf.sh
 
+Create a logs directory
+    mkdir c9-nginx/logs
+
 Start nginx
-  
     nginx -p $PWD/c9-nginx/
 
 Stop nginx
-  
     nginx -s stop -p $PWD/c9-nginx/
 
+#### Compile the site
+
+    nanoc co
+    bundle exec guard # to watch for changes
+    
+#### Browse to your site
+You can access your site at projecthame.username.c9.io
 
 ## Software Used
 - [nanoc](http://nanoc.ws/)
