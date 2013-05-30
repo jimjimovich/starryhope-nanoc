@@ -45,15 +45,19 @@ Chose the repo you just forked from your list of repos in your Cloud9 dashboard 
 #### Configure and start nginx
 
 Generate your nginx.conf file (to add your ip, port and root folder)
+
     c9-nginx/generate-conf.sh
 
 Create a logs directory
+
     mkdir c9-nginx/logs
 
 Start nginx
+
     nginx -p $PWD/c9-nginx/
 
 Stop nginx
+
     nginx -s stop -p $PWD/c9-nginx/
 
 #### Compile the site
