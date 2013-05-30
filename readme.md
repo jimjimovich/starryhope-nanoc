@@ -33,9 +33,9 @@ If you have Virtualbox and [Vagrant](http://www.vagrantup.com/) installed, you c
 
 Chose the repo you just forked from your list of repos in your Cloud9 dashboard and click "clone to edit"
 
+(the following comands are all for the terminal in Cloud9)
 #### Install gems
 
-(the following comands are all for the terminal in Cloud9)
     bundle install
     
 #### Install nginx
