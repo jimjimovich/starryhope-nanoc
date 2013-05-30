@@ -52,3 +52,16 @@ build/config/buildinfo.properties
 
 # Vagrant
 .vagrant
+
+# Cloud 9
+.c9revisions
+
+# Nginx temp files
+c9-nginx/client_body_temp
+c9-nginx/fastcgi_temp
+c9-nginx/logs
+c9-nginx/proxy_temp
+c9-nginx/scgi_temp
+c9-nginx/uwsgi_temp
+c9-nginx/nginx.pid
+c9-nginx/conf/nginx.conf
