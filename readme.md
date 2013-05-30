@@ -5,7 +5,7 @@ This is the source code used to build [www.starryhope.com](http://www.starryhope
 
 Feel free to browse this code for ideas for making your own nanoc powered blog, or download it and use it as a template for your own site. If you find this useful, it'd be great if you would link to [www.starryhope.com](http://www.starryhope.com).
 
-## Get started
+## Getting started Vagrant
 If you have Virtualbox and [Vagrant](http://www.vagrantup.com/) installed, you can get started really quickly. If you don't use Vagrant, I highly suggest you give it a try.
 
 #### 1. Clone this repository
