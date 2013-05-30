@@ -84,7 +84,6 @@ DEPENDENCIES
   guard-nanoc
   i18n
   kramdown
-  listen
   mime-types
   nanoc
   nanoc-cachebuster (>= 0.3.0)
