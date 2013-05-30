@@ -25,6 +25,16 @@ If you have Virtualbox and [Vagrant](http://www.vagrantup.com/) installed, you c
 
 #### 5. Browse to [http://localhost:8080](http://localhost:8080) to see the results!
 
+## Get started on [Cloud9](https://c9.io)
+
+#### Configure and start nginx
+Generate your conf file (to add your ip, port and root folder)
+    c9-nginx/generate-conf.sh
+Start nginx
+    nginx -p $PWD/c9-nginx/                                                                                                                                         
+Stop nginx
+    nginx -s stop -p $PWD/c9-nginx/
+
 
 ## Software Used
 - [nanoc](http://nanoc.ws/)
