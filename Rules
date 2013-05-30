@@ -54,7 +54,7 @@ compile '/assets/javascripts/lib/*' do
 end
 
 compile '/assets/javascripts/vendor/*' do
-  filter :uglify_js
+  #filter :uglify_js
 end
 
 compile '/assets/javascripts/*' do

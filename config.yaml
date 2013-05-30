@@ -7,7 +7,6 @@ title: Your Title Here
 
 featured_articles: ['great-blog-post', 'post-about-mac']
 popular_articles: ['system-administration-post', 'ubuntu-post']
-featured_front_bottom: ['great-blog-post', 'post-about-mac','system-administration-post', 'ubuntu-post']
 
 # Twitter meta data
 twitter_user: '@yourtwitterid'
