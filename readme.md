@@ -35,7 +35,7 @@ Generate your conf file (to add your ip, port and root folder)
 
 Start nginx
   
-    nginx -p $PWD/c9-nginx/                                                                                                                                         
+    nginx -p $PWD/c9-nginx/
 
 Stop nginx
   
