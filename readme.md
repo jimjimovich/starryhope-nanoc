@@ -30,12 +30,16 @@ If you have Virtualbox and [Vagrant](http://www.vagrantup.com/) installed, you c
 #### Configure and start nginx
 
 Generate your conf file (to add your ip, port and root folder)
-    c9-nginx/generate-conf.sh
+
+  c9-nginx/generate-conf.sh
 
 Start nginx
-    nginx -p $PWD/c9-nginx/                                                                                                                                         
+  
+  nginx -p $PWD/c9-nginx/                                                                                                                                         
+
 Stop nginx
-    nginx -s stop -p $PWD/c9-nginx/
+  
+  nginx -s stop -p $PWD/c9-nginx/
 
 
 ## Software Used
